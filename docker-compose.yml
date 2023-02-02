@@ -97,6 +97,8 @@ services:
     restart: unless-stopped
     expose:
       - 3000
+    ports:
+      - "3000:3000"
     networks:
       - monitor-net
     labels:
@@ -117,7 +119,7 @@ services:
     image: stefanprodan/caddy
     container_name: caddy
     ports:
-      - "3000:3000"
+      # - "3000:3000"
       - "9090:9090"
       - "9093:9093"
       - "9091:9091"
